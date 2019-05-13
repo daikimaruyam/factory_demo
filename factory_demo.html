@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<!-- saved from url=(0022)http://localhost:3000/ -->
+<html lang="jp"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <title>factory</title>
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  <link rel="stylesheet" href="./factory_demo_files/html5reset.css">
+  <link rel="stylesheet" href="./factory_demo_files/allstyle.css">
+  <link rel="stylesheet" href="./factory_demo_files/bootstrap.min.css">
+  
+  <script src="./factory_demo_files/allscript.js"></script>
+  <!-- jQuery library -->
+  <script src="./factory_demo_files/jquery.min.js"></script>
+  <!-- Latest compiled JavaScript -->
+  <script src="./factory_demo_files/bootstrap.min.js"></script>
+
+  <meta name="csrf-param" content="authenticity_token">
+<meta name="csrf-token" content="wq/yHj3hSD5HMytuFAiVJ/j4CS39jvetSfRSclVI58oQpZi28FUVyuPD9lAtE8zM6oV60/4XZ0JHbOr0kdJU6A==">
+  <meta property="og:locale" content="ja">
+<meta property="og:type" content="website">
+<meta property="og:title" content="factory">
+<meta property="og:description" content="">
+<meta property="og:url" content="http://localhost:3000/">
+<meta property="og:site_name" content="">
+<meta property="og:image" content="">
+
+  <link rel="stylesheet" media="all" href="./factory_demo_files/application.self-dae5c5da7223ce739ad497817a3df9ba2fa2840da302653b11558b4f7d98bfc3.css">
+<link rel="stylesheet" media="all" href="./factory_demo_files/main.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css">
+  <script src="./factory_demo_files/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js"></script>
+<script src="./factory_demo_files/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js"></script>
+<script src="./factory_demo_files/contact.self-304f41f8fe6500810d00e27022de97230bedc088d06fd7cc05760d6dc46fae9c.js"></script>
+<script src="./factory_demo_files/snsshare.self-03af98f4a22a4dd780200f1bd43636e29defa40c722f594ec0ba1cfbb73d7589.js"></script>
+<script src="./factory_demo_files/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js"></script>
+</head>
+<body>
+<div class="clearfix" id="topWk" style="display:nones;">
+    <header class="top">
+        <div>FACTORY</div>
+    </header>
+    <div class="top-container top-container-top">
+        <div>
+            <div>
+                <div class="top-con-msg">ほしいものはつくれる</div>
+                <div class="bottomBtns">
+                    <a href="javascript:void();" onclick="ideaLoginInput();return false;" class="orderBtn">オーダーしたい方</a>
+                    <div>
+                      <a class="topRegLink" href="javascript:void(0);" onclick="tourokuOpen();return false;">オーダーしたい方のアカウント作成はこちら</a>
+                    </div>
+                    <a href="javascript:void(0);" onclick="craftLoginWk();return false;" class="ideaBtn">
+                       <div>アイデアを探している方<br>（作り手・職人）</div>
+                    </a>
+                    <div>
+                      <a class="topRegLink" href="javascript:void(0);" onclick="Craftman();return false;">つくりたい方のアカウント作成はこちら  </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ideaWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+          <a class="headerBackLink" href="http://localhost:3000/"></a>
+          <a href="http://localhost:3000/">FACTORY</a>
+        </div>
+    </header>
+    <div class="idea-container">
+        <div>
+            <div class="idea-account-title">
+              <div>アカウント作成</div>
+              <div>ほしいものがある方用</div>
+            </div>
+            <div class="idea-account-detail">
+                <div><input type="text" placeholder="ユーザー名（半角英数字 4〜12文字）"></div>
+                <div><input type="text" placeholder="メールアドレス"></div>
+                <div><input type="password" placeholder="パスワード（半角英数字 6〜20文字）"></div>
+                <div><input type="password" placeholder="パスワード（確認）"></div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="姓"></div>
+                  <div><input type="text" placeholder="名"></div>
+                </div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="せい（ふりがな）"></div>
+                  <div><input type="text" placeholder="めい（ふりがな）"></div>
+                </div>
+            </div>
+            <div class="idea-account-kiyaku">
+                <label><input type="checkbox" onclick="">利用規約・個人情報保護方針に同意する</label>
+            </div>
+            <div class="idea-account-btn">
+                <a href="javascript:void(0);" onclick="ideaConfWk();return false;">入力内容を確認</a>
+            </div>
+        </div>
+    </div>
+    <footer class="ideaBottom">
+        <div><a href="javascript:void(0);" onclick="ideaLoginInput();return false;">オーダーしたい方のログインはこちら</a></div>
+    </footer>
+</div>
+<div id="ideaConfWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+      <div>
+        <a class="headerBackLink" href="http://localhost:3000/"></a>
+        <a href="http://localhost:3000/">FACTORY</a></div>
+    </header>
+    <div class="idea-container">
+        <div>
+            <div class="idea-account-title">
+              <div>確認画面</div>
+              <div>ほしいものがある方用</div>
+            </div>
+            <div class="idea-account-detail idea-account-detail-readOnly">
+                <div><input type="text" value="yasuyasu" placeholder="ユーザー名（半角英数字 4〜12文字）" readonly=""></div>
+                <div><input type="text" value="y.neworld.group1@gmail.com" placeholder="メールアドレス" readonly=""></div>
+                <div><input type="password" value="xxxxx" placeholder="パスワード（半角英数字 6〜20文字）" readonly=""></div>
+                <div><input type="password" value="xxxxx" placeholder="パスワード（確認）" readonly=""></div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="姓" value="井手" readonly=""></div>
+                  <div><input type="text" placeholder="名" value="康博" readonly=""></div>
+                </div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="せい（ふりがな）" value="いで"></div>
+                  <div><input type="text" placeholder="めい（ふりがな）" value="やすひろ"></div>
+                </div>
+            </div>
+            <div class="idea-account-kiyaku">
+                <label><b>✓</b>利用規約・個人情報保護方針に同意する</label>
+            </div>
+            <div class="idea-account-btn-reg">
+                <a href="javascript:void(0);" onclick="ideaCompWk();return false;">この内容でアカウントを作成</a>
+            </div>
+            <div class="idea-account-btn-ret">
+                <a href="javascript:void(0);" onclick="tourokuOpen();return false;">入力画面にもどる</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ideaCompWk" class="idea-comp-wk clearfix" style="display:none;">
+    <header class="ideaTop">
+      <div>
+        <a class="headerBackLink" href="http://localhost:3000/"></a>
+        <a href="http://localhost:3000/">FACTORY</a></div>
+    </header>
+    <div class="idea-con-comp">
+        <div>
+          アカウント登録が<br>完了しました
+          <a href="javascript:void(0);" onclick="ideaLogin(1);return false;">職人をさがす</a>
+        </div>
+    </div>
+</div>
+
+
+<div id="ideaWkMyPage" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick="ideaReqEdit();return false;"></a>
+        </div>
+    </header>
+    <div class="idea-container">
+        <div>
+            <div class="idea-account-title">
+              <div>マイページ</div>
+              <div>ほしいものがある方用</div>
+            </div>
+            <div class="idea-account-detail">
+                <div><input type="text" value="yasuyasu" placeholder="ユーザー名（半角英数字 4〜12文字）"></div>
+                <div><input type="text" value="y.neworld.group1@gmail.com" placeholder="メールアドレス"></div>
+                <div><input type="password" value="xxxxx" placeholder="パスワード（半角英数字 6〜20文字）"></div>
+                <div><input type="password" value="xxxxx" placeholder="パスワード（確認）"></div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="姓" value="井手"></div>
+                  <div><input type="text" placeholder="名" value="康博"></div>
+                </div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="せい（ふりがな）" value="いで"></div>
+                  <div><input type="text" placeholder="めい（ふりがな）" value="やすひろ"></div>
+                </div>
+            </div>
+            <div class="idea-account-btn-chg">
+                <a href="javascript:void(0);" onclick="myAccountMod();return false;">内容を変更する</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="creatorMyPage" class="clearfix" style="display:none;">
+    <header class="craftTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerCraftAccountLink" href="javascript:void(0);" onclick="creatorMyPage();return false;"></a>
+        </div>
+    </header>
+    <div class="craft-container">
+        <div>
+            <div class="craft-account-title">
+              <div>マイページ</div>
+              <div>つくれる方用</div>
+            </div>
+
+            <div class="craft-account-detail">
+                <div><input type="text" placeholder="メールアドレス" autocomplete="off" value="kuma@gsdfa.com"></div>
+                <div><input type="password" placeholder="パスワード（半角英数字 6〜20文字）" autocomplete="off" value="test"></div>
+                <div><input type="password" placeholder="パスワード（確認）" value="test"></div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="姓" value="物創"></div>
+                  <div><input type="text" placeholder="名" value="造太郎"></div>
+                </div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="せい（ふりがな）" value="ものつくり"></div>
+                  <div><input type="text" placeholder="めい（ふりがな）" value="つくたろう"></div>
+                </div>
+                <div><input type="text" placeholder="会社名・屋号" value="（有）ものつくり"></div>
+                <div><input type="text" placeholder="所在地" value="熊本県球磨郡錦町木上北大字２２３−１"></div>
+                <div><input type="text" placeholder="電話番号" value="0966-38-xxxx"></div>
+                <div><input type="text" placeholder="設立" value="1968年4月"></div>
+                <div class="craft-account-midasi1">カテゴリを選んでください</div>
+                <div class="craft-account-categ">
+                    <div>
+                        <select>
+                            <option>------</option>
+                            <option selected="selected">陶磁器</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="craft-account-midasi1">特徴・こだわりを選んでください（複数可）</div>
+                <div class="craft-account-tokucho clearfix">
+                  <label><input type="checkbox" checked="checked">小ロット可</label>
+                  <label><input type="checkbox" checked="checked">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox" checked="checked">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                </div>
+            </div>
+
+
+
+            <div class="idea-account-btn-chg">
+                <a href="javascript:void(0);" onclick="return false;">内容を変更する</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ideaLoginWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+      <div>
+        <a class="headerBackLink" href="http://localhost:3000/"></a>
+        <a href="http://localhost:3000/">FACTORY</a></div>
+    </header>
+    <div class="idea-container">
+      <div>
+          <div class="idea-account-title">
+            <div>ログイン</div>
+            <div>ほしいものがある方用</div>
+          </div>
+          <div class="idea-account-detail">
+              <div><input type="text" placeholder="パスワード（半角英数字 6〜20文字）"></div>
+              <div><input type="text" placeholder="パスワード（確認）"></div>
+          </div>
+          <div class="idea-account-login">
+              <a href="javascript:void(0);" onclick="ideaLogin(1);return false;">ログイン</a>
+          </div>
+          <div class="idea-account-pass-wasure">
+              <a href="javascript:void(0);" onclick="alert(&#39;UIが無いよ！&#39;);">パスワードを忘れた方はこちら</a>
+          </div>
+          <div class="idea-account-new">
+              <a href="javascript:void(0);" onclick="tourokuOpen();">アカウントの新規作成はこちら</a>
+          </div>
+      </div>
+    </div>
+</div>
+
+<div id="ideaCreatorWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick="ideaReqEdit();return false;"></a>
+        </div>
+    </header>
+    <nav class="idea-search-top">
+        <div class="clearfix">
+            <a class="tab-select">職人を探す</a>
+            <a class="tab-none-select" onclick="ideaRequestWk();">投稿済みのアイデア</a>
+        </div>
+    </nav>
+    <div class="idea-container-search">
+        <div class="clearfix">
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+          <a class="creator-wak" href="javascript:void(0);" onclick="creatorDetail();return false;">
+              <div class="creator-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="creator-wak-det">
+                <div class="creator-wak-det-tit">丹波スタイル</div>
+                <div>京都府と兵庫県との県境で生まれた『丹波焼』の窯元です。</div>
+              </div>
+          </a>
+        </div>
+    </div>
+</div>
+<div id="ideaRequestWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick="ideaReqEdit();return false;" ;=""></a>
+        </div>
+    </header>
+    <nav class="idea-search-top">
+        <div class="clearfix">
+            <a class="tab-none-select" href="javascript:void(0);" onclick="ideaLogin(1);return false;">職人を探す</a>
+            <a class="tab-select">投稿済みのアイデア</a>
+        </div>
+    </nav>
+    <div class="idea-container-search">
+        <div class="clearfix">
+          <a class="idea-post" href="javascript:void(0);" onclick="ideaReqEdit();return false;">アイデアを投稿する</a>
+          <div class="idea-requesting-title">依頼中のアイデア</div>
+        </div>
+        <div class="clearfix">
+            <a class="idea-requesting-wak clearfix" href="javascript:void(0);" onclick="ideaIdeaUpdReg(3);return false;">
+                <div class="requesting-wak-img">
+                    <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+                </div>
+                <div class="requesting-wak-det">
+                    <div class="requesting-wak-det-name">自分専用のブランド器をつくりたい</div>
+                    <div class="requesting-wak-det-noki">2019年5月30日</div>
+                    <div class="requesting-wak-det-suu">2 セット</div>
+                </div>
+                <div class="requesting-wak-msg">
+                    <b>未読のメッセージが&nbsp;3件&nbsp;あります</b>
+                </div>
+            </a>
+            <a class="idea-requesting-wak idea-requesting-wak-msg-none clearfix" href="javascript:void(0);" onclick="ideaIdeaUpdReg(3);return false;">
+                <div class="requesting-wak-img">
+                    <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+                </div>
+                <div class="requesting-wak-det">
+                    <div class="requesting-wak-det-name">自分専用のブランド器をつくりたい</div>
+                    <div class="requesting-wak-det-noki">2019年5月30日</div>
+                    <div class="requesting-wak-det-suu">2 セット</div>
+                </div>
+            </a>
+            <a class="idea-requesting-wak idea-requesting-wak-msg-none clearfix" href="javascript:void(0);" onclick="ideaIdeaUpdReg(3);return false;">
+                <div class="requesting-wak-img">
+                    <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+                </div>
+                <div class="requesting-wak-det">
+                    <div class="requesting-wak-det-name">自分専用のブランド器をつくりたい</div>
+                    <div class="requesting-wak-det-noki">2019年5月30日</div>
+                    <div class="requesting-wak-det-suu">2 セット</div>
+                </div>
+            </a>
+        </div>
+        <div class="clearfix">
+          <div class="idea-requesting-title">依頼待ちのアイデア</div>
+        </div>
+        <div class="clearfix">
+            <a class="idea-requesting-wak idea-requesting-wak-zumi clearfix" href="javascript:void(0);" onclick="ideaIdeaUpdReg(3);return false;">
+                <div class="requesting-wak-img">
+                    <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+                </div>
+                <div class="requesting-wak-det">
+                    <div class="requesting-wak-det-name">自分専用のブランド器をつくりたい</div>
+                    <div class="requesting-wak-det-noki">2019年5月30日</div>
+                    <div class="requesting-wak-det-suu">2 セット</div>
+                </div>
+            </a>
+            <a class="idea-requesting-wak idea-requesting-wak-zumi clearfix" href="javascript:void(0);" onclick="ideaIdeaUpdReg(3);return false;">
+                <div class="requesting-wak-img">
+                    <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+                </div>
+                <div class="requesting-wak-det">
+                    <div class="requesting-wak-det-name">自分専用のブランド器をつくりたい</div>
+                    <div class="requesting-wak-det-noki">2019年5月30日</div>
+                    <div class="requesting-wak-det-suu">2 セット</div>
+                </div>
+            </a>
+        </div>
+    </div>
+</div>
+<div id="ideaCreatorDetailWk" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick="ideaReqEdit();return false;"></a>
+        </div>
+    </header>
+    <nav class="idea-search-top">
+        <div class="clearfix">
+            <a class="tab-select">職人を探す</a>
+            <a class="tab-none-select" onclick="ideaRequestWk();return false;">投稿済みのアイデア</a>
+        </div>
+    </nav>
+    <div class="idea-container-search">
+        <div class="clearfix">
+            <div class="ideaCDetRetLink">
+                <a href="javascripf:void(0);" onclick="">＜ 職人一覧に戻る</a>
+            </div>
+            <div class="ideaCDetName">えいしろうスタイル</div>
+            <div class="ideaCDetPic">
+                <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png">
+            </div>
+            <div class="ideaCDetDetTit">基本情報</div>
+            <div class="ideaCDetDetDet">会社名（屋号）：</div>
+            <div class="ideaCDetDetDet">所在地：</div>
+            <div class="ideaCDetDetDet">電話：</div>
+            <div class="ideaCDetDetDet">設立：</div>
+            <div class="ideaCDetDetDet">代表者名：</div>
+            <div class="ideaCDetDetTit">カテゴリ</div>
+            <div class="ideaCDetDetDet">陶磁器</div>
+            <div class="ideaCDetDetTit">特徴・こだわり</div>
+            <div class="ideaCDetDetDet ideaCDetDetTkc">
+                <b>小ロット可能</b>
+                <b>小ロット可能</b>
+                <b>器</b>
+                <b>小ロット可能</b>
+                <b>小ロット可能</b>
+            </div>
+            <div class="ideaCDetDetPics">
+              <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="" data-target="#carousel1" data-slide-to="0"></li>
+                  <li data-target="#carousel1" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel1" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item active">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                </div>
+                <a class="left carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+            <div class="ideaCDetDetRequest">
+                <a href="javascript:void(0);" onclick="ideaReqEdit();return false;">この職人にアイデアを依頼する</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ideaIdeaUpload" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+        </div>
+    </header>
+    <div class="idea-container-upload">
+        <div class="clearfix">
+            <div class="ideaUpdMidasi">アイデアを投稿する</div>
+            <div class="ideaUpdTitle">
+                <div><input type="text" placeholder="タイトル（30文字以内）"></div>
+                <div><input type="text" placeholder="納期"></div>
+                <div><input type="text" placeholder="数量"></div>
+            </div>
+            <div class="ideaUpdMidasi2">カテゴリを選んでください</div>
+            <div class="ideaUpdCateg">
+                <div>
+                    <select>
+                        <option>------</option>
+                        <option>陶磁器</option>
+                    </select>
+                </div>
+            </div>
+            <div class="ideaUpdMidasi2">備考欄</div>
+            <div class="ideaUpdBiko">
+                <div>
+                    <textarea placeholder="細かい仕様などを記載してください。"></textarea>
+                </div>
+            </div>
+            <div class="ideaUpdMidasi3">アイデアに必要な画像を選んでください<br>（4枚まで）</div>
+            <div class="ideaUpdPics">
+                <div><input type="file" placeholder="ギャラリーの画像を登録する１"></div>
+                <div><input type="file" placeholder="ギャラリーの画像を登録する２"></div>
+                <div><input type="file" placeholder="ギャラリーの画像を登録する３"></div>
+                <div><input type="file" placeholder="ギャラリーの画像を登録する４"></div>
+            </div>
+            <div class="ideaUpdKariReg">
+                <a href="javascript:void(0);" onclick="ideaIdeaUpdReg(1);return false;">入力内容を確認</a>
+            </div>
+            <div class="ideaUpdReturn">
+              <a href="javascript:void(0)" onclick="ideaInputReturn();return false;">アイデアの投稿をやめる</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ideaIdeaUpdReg" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick="" ;=""></a>
+        </div>
+    </header>
+    <div class="idea-container-upd-reg">
+        <div class="clearfix">
+          <div class="ideaUpdRegRet">
+              <a href="javascript:void(0)" onclick="ideaRequestWk(2);return false;">＜ アイデア一覧に戻る</a>
+          </div>
+          <div class="ideaUpdRegTitle">友人の結婚祝いにオリジナルマグ制作を依頼</div>
+            <div class="ideaUpdRegPics">
+              <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="" data-target="#carousel1" data-slide-to="0"></li>
+                  <li data-target="#carousel1" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel1" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item active">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                </div>
+                <a class="left carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+            <div class="ideaUpdRegTit">依頼者</div>
+            <div class="ideaUpdRegDet">
+                Yasu ide
+            </div>
+            <div class="ideaUpdRegTit">納期</div>
+            <div class="ideaUpdRegDet">
+                2019年5月30日（残り 94日）
+            </div>
+            <div class="ideaUpdRegTit">数量</div>
+            <div class="ideaUpdRegDet">
+                30セット
+            </div>
+            <div class="ideaUpdRegTit">カテゴリ</div>
+            <div class="ideaUpdRegDet">
+                陶磁器
+            </div>
+            <div class="ideaUpdRegTit">備考</div>
+            <div class="ideaUpdRegDet">
+                xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+            </div>
+            <div class="ideaUpdRegBtn" id="ideaUpdRegBtn1">
+                <a href="javascript:void(0);" onclick="ideaIdeaUpdReg(2);return false;">このアイデアを投稿する</a>
+            </div>
+            <div class="ideaUpdRegBtn2" id="ideaUpdRegBtn2">
+                <a href="javascript:void(0);" onclick="ideaChat();return false;">このアイデアについてやり取り</a>
+            </div>
+            <div class="ideaUpdRegReturn" id="ideaUpdRegReturn">
+              <a href="javascript:void(0);" onclick="ideaReqEdit();return false;">投稿内容を変更する</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ideaIdeaChat" class="clearfix" style="display:none;">
+    <header class="ideaTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpen();return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerIdeaRegLink" href="javascript:void(0);" onclick=""></a>
+        </div>
+    </header>
+    <div class="idea-container-chat">
+        <div class="clearfix">
+            <div class="ideaChatRetLink">
+                <a href="javascripf:void(0);" onclick="">＜ 依頼アイデアに戻る</a>
+            </div>
+            <div class="ideaChatTitle">友人の結婚祝いにオリジナルマグ制作を依頼</div>
+            <div class="ideaChatNokiSuu clearfix">
+                <div>2019年5月30日</div>
+                <div>30 セット</div>
+            </div>
+            <div class="ideaChatWk">
+              <div class="ideaChatCreWk">
+                  <div class="ideaChatCreWkPop">サンプルの作成をXXXまでに行いたいと思います。</div>
+                  <div class="ideaChatCreWkDet clearfix">
+                      <div class="ideaChatCreWkPic" style="background-image:url(https://files.slack.com/files-pri/T0CDD9NRJ-FGU9W9AKF/ios__________.jpg)"></div>
+                      <div class="ideaChatCreWkName">菊祥陶器 さん</div>
+                      <div class="ideaChatCreWkDate">2019.05.04 12:34</div>
+                  </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">よろしくお願いします。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatCreWk">
+                  <div class="ideaChatCreWkPop">サンプルの作成が完了しました。全色サンプルをご用意しました。</div>
+                  <div class="ideaChatCreWkDet clearfix">
+                      <div class="ideaChatCreWkPic" style="background-image:url(https://files.slack.com/files-pri/T0CDD9NRJ-FGU9W9AKF/ios__________.jpg)"></div>
+                      <div class="ideaChatCreWkName">菊祥陶器 さん</div>
+                      <div class="ideaChatCreWkDate">2019.05.04 12:34</div>
+                  </div>
+              </div>
+              <div class="ideaChatCreWk">
+                  <div class="ideaChatCreWkPop">サイズも「大・中・小」作成しています。</div>
+                  <div class="ideaChatCreWkDet clearfix">
+                      <div class="ideaChatCreWkPic" style="background-image:url(https://files.slack.com/files-pri/T0CDD9NRJ-FGU9W9AKF/ios__________.jpg)"></div>
+                      <div class="ideaChatCreWkName">菊祥陶器 さん</div>
+                      <div class="ideaChatCreWkDate">2019.05.04 12:34</div>
+                  </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">ありがとうございます。いつ頃発送していただけますか？来月月初までに届くとありがたいです。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatCreWk">
+                  <div class="ideaChatCreWkPop">明日発送しますので、今月末には届くかと思います。</div>
+                  <div class="ideaChatCreWkDet clearfix">
+                      <div class="ideaChatCreWkPic" style="background-image:url(https://files.slack.com/files-pri/T0CDD9NRJ-FGU9W9AKF/ios__________.jpg)"></div>
+                      <div class="ideaChatCreWkName">菊祥陶器 さん</div>
+                      <div class="ideaChatCreWkDate">2019.05.04 12:34</div>
+                  </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+              <div class="ideaChatUserWk">
+                <div class="ideaChatUserWkPop">あざす。</div>
+                <div class="ideaChatUserWkDet">
+                    <div class="ideaChatUserWkDate">2019.05.02 12:33</div>
+                </div>
+              </div>
+            </div>
+            <div class="ideaChatMsgWk">
+                <textarea placeholder="XXX文字以内で入力してください。"></textarea>
+                <a href="javascript:void(0);" onclick="ideaChat();return false;">コメントをする</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="hamburgerPop" onclick="hamburgerModalOpen();">
+    <div id="hamburgerPopList" onclick="event.stopPropagation();">
+        <a href="javascript:void(0);" onclick="ideaLogin(2);return false;">職人を探す</a>
+        <a href="javascript:void(0);" onclick="ideaRequestWk(2);return false;">投稿済みのアイデア</a>
+        <a href="javascript:void(0);" onclick="ideaRequestWk(2);return false;">製作終了したアイデア</a>
+        <a href="javascript:void(0);" onclick="ideaWkMyPage();return false;">マイページ</a>
+        <a href="http://localhost:3000/">ログアウト</a>
+    </div>
+</div>
+
+<div id="Craftman" class="clearfix" style="display:none;">
+    <header class="craftTop">
+        <div>
+          <a class="headerBackLink" href="http://localhost:3000/"></a>
+          <a href="http://localhost:3000/">FACTORY</a>
+      </div>
+    </header>
+    <div class="craft-container">
+        <div>
+            <div class="craft-account-title">
+              <div>アカウント作成</div>
+              <div>つくれる方用</div>
+            </div>
+            <div class="craft-account-detail">
+                <div><input type="text" placeholder="メールアドレス" autocomplete="off"></div>
+                <div><input type="password" placeholder="パスワード（半角英数字 6〜20文字）" autocomplete="off"></div>
+                <div><input type="password" placeholder="パスワード（確認）"></div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="姓"></div>
+                  <div><input type="text" placeholder="名"></div>
+                </div>
+                <div class="clearfix">
+                  <div><input type="text" placeholder="せい（ふりがな）"></div>
+                  <div><input type="text" placeholder="めい（ふりがな）"></div>
+                </div>
+                <div><input type="text" placeholder="会社名・屋号"></div>
+                <div><input type="text" placeholder="所在地"></div>
+                <div><input type="text" placeholder="電話番号"></div>
+                <div><input type="text" placeholder="設立"></div>
+                <div class="craft-account-midasi1">カテゴリを選んでください</div>
+                <div class="craft-account-categ">
+                    <div>
+                        <select>
+                            <option>------</option>
+                            <option>陶磁器</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="craft-account-midasi1">特徴・こだわりを選んでください（複数可）</div>
+                <div class="craft-account-tokucho clearfix">
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                  <label><input type="checkbox">小ロット可</label>
+                  <label><input type="checkbox">器</label>
+                  <label><input type="checkbox">ガラス</label>
+                </div>
+            </div>
+            <div class="craft-account-kiyaku">
+                <label><input type="checkbox" onclick="">利用規約・個人情報保護方針に同意する</label>
+            </div>
+            <div class="craft-account-btn">
+                <a href="javascript:void(0);" onclick="return false;">入力内容を確認</a>
+            </div>
+        </div>
+    </div>
+    <footer class="craftBottom">
+        <div><a href="javascript:void(0);" onclick="craftLoginWk();return false;">つくりたい方のログインはこちら</a></div>
+    </footer>
+</div>
+<div id="craftLoginWk" class="clearfix" style="display:none;">
+    <header class="craftTop">
+      <div>
+        <a class="headerBackLink" href="http://localhost:3000/"></a>
+        <a href="http://localhost:3000/">FACTORY</a>
+      </div>
+    </header>
+    <div class="craft-container">
+      <div>
+          <div class="craft-account-title">
+            <div>ログイン</div>
+            <div>ほしいものがある方用</div>
+          </div>
+          <div class="craft-account-detail">
+              <div><input type="text" placeholder="パスワード（半角英数字 6〜20文字）"></div>
+              <div><input type="text" placeholder="パスワード（確認）"></div>
+          </div>
+          <div class="craft-account-login">
+              <a href="javascript:void(0);" onclick="CraftCreatorWk();return false;">ログイン</a>
+          </div>
+          <div class="craft-account-pass-wasure">
+              <a href="javascript:void(0);" onclick="alert(&#39;UIが無いよ！&#39;);">パスワードを忘れた方はこちら</a>
+          </div>
+          <div class="craft-account-new">
+              <a href="javascript:void(0);" onclick="Craftman();">アカウントの新規作成はこちら</a>
+          </div>
+      </div>
+    </div>
+</div>
+<div id="CraftCreatorWk" class="clearfix" style="display:none;">
+    <header class="craftTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerCraftAccountLink" href="javascript:void(0);" onclick="creatorMyPage();return false;"></a>
+        </div>
+    </header>
+    <nav class="craft-search-top">
+        <div class="clearfix">
+            <a class="tab-select">アイデアを探す</a>
+            <a class="tab-none-select" onclick="return false;">製作中のアイデア</a>
+        </div>
+    </nav>
+    <div class="craft-container-search">
+        <div class="clearfix">
+          <a class="craft-idea-wak" href="javascript:void(0);" onclick="CraftIdeaDetail();return false;">
+              <div class="craft-idea-wak-img">
+                  <img src="./factory_demo_files/T0CDD9NRJ-UCKM0CCEQ-84ddf3a71335-72">
+              </div>
+              <div class="craft-idea-wak-det">
+                <div class="craft-idea-wak-det-tit">友人の結婚祝いにオリジナルマグ制作を依頼</div>
+                <div class="craft-idea-wak-det-noki">2019年5月30日</div>
+                <div class="craft-idea-wak-det-suu">30 セット</div>
+                <div class="craft-idea-wak-det-cate">陶磁器</div>
+              </div>
+          </a>
+        </div>
+    </div>
+</div>
+
+<div id="CraftIdeaDetail" class="clearfix" style="display:none;">
+    <header class="craftTop">
+        <div>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="return false;"></a>
+            <a href="http://localhost:3000/">FACTORY</a>
+            <a class="headerCraftAccountLink" href="javascript:void(0);" onclick="creatorMyPage();return false;"></a>
+        </div>
+    </header>
+    <nav class="craft-search-top">
+        <div class="clearfix">
+            <a class="tab-select">アイデアを探す</a>
+            <a class="tab-none-select" onclick="return false;">製作中のアイデア</a>
+        </div>
+    </nav>
+    <div class="craft-container-idea-detail">
+        <div class="clearfix">
+            <div class="craftIdeaDetailTitle">友人の結婚祝いにオリジナルマグ制作を依頼</div>
+            <div class="craftIdeaDetailPics">
+              <div id="carousel1" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                  <li class="" data-target="#carousel1" data-slide-to="0"></li>
+                  <li data-target="#carousel1" data-slide-to="1" class=""></li>
+                  <li data-target="#carousel1" data-slide-to="2" class="active"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                  <div class="item active">
+                    <img src="./factory_demo_files/89eeabc8-ea21-4574-8573-440cc671774a_2.png" alt="">
+                  </div>
+                </div>
+                <a class="left carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="prev">
+                  <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+                <a class="right carousel-control" href="http://localhost:3000/#carousel1" role="button" data-slide="next">
+                  <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                </a>
+              </div>
+            </div>
+            <div class="craftIdeaDetailTit">依頼者</div>
+            <div class="craftIdeaDetailDet">
+                Yasu ide
+            </div>
+            <div class="craftIdeaDetailTit">納期</div>
+            <div class="craftIdeaDetailDet">
+                2019年5月30日（残り 94日）
+            </div>
+            <div class="craftIdeaDetailTit">数量</div>
+            <div class="craftIdeaDetailDet">
+                30セット
+            </div>
+            <div class="craftIdeaDetailTit">カテゴリ</div>
+            <div class="craftIdeaDetailDet">
+                陶磁器
+            </div>
+            <div class="craftIdeaDetailTit">備考</div>
+            <div class="craftIdeaDetailDet">
+                xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx xxxx
+            </div>
+            <div class="craftIdeaDetailCheck">
+                <a href="javascript:void(0);" onclick="return false;">このアイデアについてやり取り</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    //ideamanログイン入力
+    function ideaLoginInput(){
+        $("#topWk").hide();
+        $("#ideaWk").hide();
+        $("#ideaLoginWk").show();
+    }
+    function ideaLogin(type){
+        if(type=="2"){
+            hamburgerModalOpen();
+        }
+        $("#ideaLoginWk").hide();
+        $("#ideaWkMyPage").hide();
+        $("#ideaCompWk").hide();
+        $("#ideaRequestWk").hide();
+        $("#ideaCreatorWk").show();
+    }
+    //ユーザー登録
+    function tourokuOpen(){
+      $("#topWk").hide();
+      $("#ideaWk").show();
+      $("#ideaConfWk").hide();
+      $("#ideaLoginWk").hide();
+    }
+    function creatorDetail(){
+        $("#ideaCreatorWk").hide();
+        $("#ideaCreatorDetailWk").show();
+    }
+    function ideaRequestWk(type){
+        if(type=="2"){
+            hamburgerModalOpen();
+        }
+        $("#ideaLoginWk").hide();
+        $("#ideaWkMyPage").hide();
+        $("#ideaCompWk").hide();
+        $("#ideaRequestWk").hide();
+        $('#ideaCreatorWk').hide();
+        $('#ideaCreatorDetailWk').hide();
+        $('#ideaRequestWk').show();
+    }
+    function ideaReqEdit(){
+        $('#ideaCreatorWk').hide();
+        $('#ideaCreatorDetailWk').hide();
+        $('#ideaRequestWk').hide();
+        $('#ideaIdeaUpload').show();
+        $("#ideaIdeaUpdReg").hide();
+
+    }
+    function ideaInputReturn(){
+        if(confirm("アイデアの投稿をやめますか？")){
+            location.href="/";
+        }
+    }
+    function ideaIdeaUpdReg(type){
+        $("#ideaIdeaUpload").hide();
+        $("#ideaRequestWk").hide();
+        $("#ideaIdeaUpdReg").show();
+        if(type=="1"){
+            $("#ideaUpdRegBtn1").show();
+            $("#ideaUpdRegBtn2").hide();
+            $("#ideaUpdRegReturn").show();
+        }else{
+            if(type=="2"){
+                if(confirm("アイデアを投稿しますか？")){
+                    $("#ideaUpdRegBtn1").hide();
+                    $("#ideaUpdRegBtn2").show();
+                    $("#ideaUpdRegReturn").hide();
+                }
+            }else{
+                $("#ideaUpdRegBtn1").hide();
+                $("#ideaUpdRegBtn2").show();
+                $("#ideaUpdRegReturn").hide();
+            }
+        }
+    }
+    function ideaChat(){
+        $("#ideaIdeaUpdReg").hide();
+        $("#ideaIdeaChat").show();
+        $('body, html').scrollTop(0);
+    }
+    function ideaWkMyPage(){
+        $("#ideaIdeaUpload").hide();
+        $("#ideaRequestWk").hide();
+        $("#ideaIdeaUpdReg").hide();
+        $("#ideaIdeaChat").hide();
+        $("#ideaCreatorWk").hide();
+        $("#ideaWkMyPage").show();
+        hamburgerModalOpen();
+    }
+    function myAccountMod(){
+        if(confirm("アカウント情報を変更しますか？")){
+            ideaLogin(1);
+        }
+    }
+    function ideaConfWk(){
+        $("#ideaWk").hide();
+        $("#ideaConfWk").show();
+    }
+    function ideaCompWk(){
+        $("#ideaConfWk").hide();
+        $("#ideaCompWk").show();
+    }
+    function Craftman(){
+        $("#topWk").hide();
+        $("#craftLoginWk").hide();
+        $("#Craftman").show();
+    }
+    function craftLoginWk(){
+      $("#topWk").hide();
+      $("#Craftman").hide();
+      $("#craftLoginWk").show();
+    }
+    function CraftCreatorWk(){
+        $("#craftLoginWk").hide();
+        $("#CraftCreatorWk").show();
+    }
+    function CraftIdeaDetail(){
+        $("#CraftCreatorWk").hide();
+        $("#CraftIdeaDetail").show();
+    }
+    function creatorMyPage(){
+        $("#CraftCreatorWk").hide();
+        $("#CraftIdeaDetail").hide();
+        $("#creatorMyPage").show();
+    }
+</script>
+
+
+
+</body></html>
