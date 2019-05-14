@@ -16,7 +16,7 @@
   <link rel="stylesheet" href="./factory_demo_files/allstyle.css?25">
   <link rel="stylesheet" href="./factory_demo_files/bootstrap.min.css">
 
-  <script src="./factory_demo_files/allscript.js"></script>
+  <script src="./factory_demo_files/allscript.js?1"></script>
   <!-- jQuery library -->
   <script src="./factory_demo_files/jquery.min.js"></script>
   <!-- Latest compiled JavaScript -->
@@ -794,6 +794,13 @@
         <a href="https://daikimaruyam.github.io/factory_demo/factory_demo.html">ログアウト</a>
     </div>
 </div>
+<div id="hamburgerPopC" onclick="hamburgerModalOpenC();">
+    <div id="hamburgerPopCList" onclick="event.stopPropagation();">
+        <a href="javascript:void(0);" onclick="return false;">アイデアを探す</a>
+        <a href="javascript:void(0);" onclick="return false;">マイページ</a>
+        <a href="https://daikimaruyam.github.io/factory_demo/factory_demo.html">ログアウト</a>
+    </div>
+</div>
 
 <div id="Craftman" class="clearfix" style="display:none;">
     <header class="craftTop">
@@ -896,7 +903,7 @@
 <div id="CraftCreatorWk" class="clearfix" style="display:none;">
     <header class="craftTop">
         <div>
-            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="return false;"></a>
+            <a class="headerHamburgerLink" href="javascript:void(0);" onclick="hamburgerModalOpenC();return false;"></a>
             <a href="https://daikimaruyam.github.io/factory_demo/factory_demo.html">FACTORY</a>
             <a class="headerCraftAccountLink" href="javascript:void(0);" onclick="creatorMyPage();return false;"></a>
         </div>
@@ -1040,7 +1047,7 @@
         $('#ideaRequestWk').hide();
         $('#ideaIdeaUpload').show();
         $("#ideaIdeaUpdReg").hide();
-
+        $("#ideaIdeaChat").hide();
     }
     function ideaInputReturn(){
         if(confirm("アイデアの投稿をやめますか？")){

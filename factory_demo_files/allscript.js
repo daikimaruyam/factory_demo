@@ -35,3 +35,15 @@ function hamburgerModalOpen(){
   }
 
 }
+function hamburgerModalOpenC(){
+  if($("#hamburgerPopCList").css("display") == "block"){
+      $("#hamburgerPopC").hide();
+      $("#hamburgerPopCList").hide();
+      $("#hamburgerPopCList").css("left","-1024px");
+  }else{
+      $("#hamburgerPopC").show();
+      $("#hamburgerPopCList").show();
+      $("#hamburgerPopCList").css("left","0px");
+  }
+
+}
